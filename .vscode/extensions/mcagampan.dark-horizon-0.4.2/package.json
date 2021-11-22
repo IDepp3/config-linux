@@ -1,0 +1,56 @@
+{
+	"name": "dark-horizon",
+	"displayName": "Dark Horizon",
+	"description": "An elegant dark theme with vibrant foreground colors.",
+	"version": "0.4.2",
+	"author": "Michael Cagampan <mcagampan@outlook.com>",
+	"publisher": "mcagampan",
+	"engines": {
+		"vscode": "^1.49.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mcagampan/dark-horizon"
+	},
+	"bugs": {
+		"url": "https://github.com/mcagampan/dark-horizon/issues"
+	},
+	"galleryBanner": {
+		"color": "#0e0e0e",
+		"theme": "dark"
+	},
+	"icon": "logo2.png",
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"dark",
+		"dark theme",
+		"horizon",
+		"horizon theme",
+		"dark horizon",
+		"dark horizon theme",
+		"black",
+		"black theme",
+		"red",
+		"red theme",
+		"high contrast",
+		"elegant",
+		"elegant theme"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Dark Horizon",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Dark Horizon-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "9fc2be41-3d58-42cf-9beb-6e8c5a3fcf1c",
+		"publisherId": "a590a510-a53a-4fe6-9764-40fabd2186e2",
+		"publisherDisplayName": "mcagampan",
+		"installedTimestamp": 1636027316702
+	}
+}
