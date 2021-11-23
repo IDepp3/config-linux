@@ -101,12 +101,23 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # ALIAS
 
-# EXPORTS
-# export PATH=/home/depp3/Depp3/programs/maven/apache-maven-3.8.3/bin:$PATH
-# export PATH=/home/depp3/Depp3/programs/Tomcat/apache-tomcat-9.0.54/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+function nvmInstall() {
+	nvm install v16.13.0
+	nvm install-latest-npm
+	npm install -g @angular/cli
+}
 
+function configZsh() {
+	rm ~/.zshrc
+	ln -s /opt/config/zsh/.zshrc ~/
+	
+	#pluggins
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+}
 alias d3="cd /opt/"
