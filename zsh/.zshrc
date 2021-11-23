@@ -55,7 +55,7 @@ ZSH_THEME="agnoster"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
-ch will make them unavailable to other applications running on your # stamp shown in the history command output.
+#ch will make them unavailable to other applications running on your # stamp shown in the history command output.
 # You can set one of the optional three formats:
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
@@ -112,12 +112,10 @@ function nvmInstall() {
 }
 
 function configZsh() {
-	rm ~/.zshrc
-	ln -s /opt/config/zsh/.zshrc ~/
-	
 	#pluggins
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 }
 alias d3="cd /opt/"
