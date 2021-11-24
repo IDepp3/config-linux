@@ -16,3 +16,9 @@ function configZsh() {
 
 }
 
+# elimina la hibernacion y suspension del sistema
+function disableHib(){
+	sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+}
+
+
